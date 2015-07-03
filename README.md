@@ -34,3 +34,6 @@ jQuery.get("/path/to/rest-proxy/", {
 	success: function(){...}
 });
 ```
+
+## Requirements and Limitations
+ColdFusion 9.0 and higher is required to execute the code and act as a proxy. This may work on open-source CFML engines such as Railo, but it hasn't been tested. You will need permission on the server to create a new folder with an Application.cfc file. The folder will also need to be accessible from the same hostname as the rest of your content. Additionally, if ColdFusion cannot complete HTTP requests to the remote API because a certificate error, you will need to be able that error by adding the certificate to ColdFusion's cert store.
